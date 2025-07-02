@@ -1,0 +1,396 @@
+/*Colores
+        primario: #eddbc3
+        segundario: #b8752f
+        terciario: #000000
+        cuaternario: #ffffff
+        quinterio: #eddcc4cc
+        quinterio2: #eddcc4
+        quinterio3: #eddcc4cc
+        quinterio4: #eddcc4cc
+        quinterio5: #eddcc4cc
+        quinterio6: #eddcc4cc 
+*/
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #eddbc3;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 7em;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 5em;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 4em;
+}
+
+h4 {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+p {
+  font-size: 1.7em;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+span {
+  color: #000000;
+  font-weight: 800;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.container {
+  display: grid;
+  width: 100%;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px 20px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header"
+    "header header header"
+    "container-img card1 card2"
+    "container-img card3 card3"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-image: url("/assets/img/versallesNoche.png");
+  border-radius: 2em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: black;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  flex: 1;
+  padding: 1.5em;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #b8762f;
+  border-radius: 2em;
+  min-height: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1em;
+  padding: 0%;
+}
+
+.column-left-header {
+  max-width: 50%;
+  border-radius: 4em;
+  background-color: #eddbc3;
+  opacity: 0.8;
+  padding: 2em;
+}
+
+.column-left-footer {
+  max-width: 50%;
+  border-radius: 4em;
+  padding: 2em;
+}
+
+.column-right-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 50%;
+  border-radius: 4em;
+  height: 100%;
+  background-image: url("/assets/img/LOGONG.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 2em;
+}
+
+.column-right-footer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2em;
+}
+
+.card1 {
+  grid-area: card1;
+  background-image: url("/assets/img/interior2.webp");
+  border-radius: 2em;
+}
+
+.card2 {
+  grid-area: card2;
+  background-image: url("/assets/img/parqueaderoVersalles.webp");
+  border-radius: 2em;
+}
+
+.card3 {
+  grid-area: card3;
+  background-image: url("/assets/img/interior1.webp");
+  border-radius: 2em;
+}
+
+.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #eddcc4cc;
+  border-radius: 2em;
+  padding: 1em;
+  text-align: center;
+  color: #000000;
+}
+
+.container-img {
+  grid-area: container-img;
+  background-image: url("/assets/img/versallesNoche.webp");
+  color: white;
+  border-radius: 2em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2em;
+}
+
+
+.card1,
+.card2,
+.card3,
+.container-img {
+  min-height: 40em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*
+         * MEDIA QUERIES PARA RESPONSIVIDAD
+         * Todos los elementos se apilarán uno debajo del otro en pantallas pequeñas.
+         */
+
+/* Media Query para pantallas grandes (más de 1200px) */
+@media (min-width: 1201px) {
+  .container {
+    width: 90%;
+  }
+
+  .header {
+    min-height: 70em;
+
+  }
+}
+
+/* Media Query para pantallas de TABLET y pequeñas (hasta 992px) */
+@media (max-width: 992px) {
+  .container {
+    width: 98%;
+    gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "container-img"
+      "card1"
+      "card2"
+      "card3"
+      "footer";
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+
+  h2 {
+    font-size: 4em;
+  }
+
+  h3 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 1.8em;
+  }
+
+  span {
+    font-size: 2em;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1em;
+    min-height: 40em;
+  }
+
+  .column-left-header {
+    max-width: 100%;
+    padding: 1em;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+    min-height: auto;
+    padding: 1em;
+  }
+
+  .column-left-footer {
+    max-width: 100%;
+    padding: 1em;
+    order: 1;
+  }
+
+  .column-right-footer {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    border-radius: 2em;
+    order: 2;
+  }
+
+  .column-right-footer img {
+    min-height: 30em;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+
+  /* .container-text - ELIMINADO */
+
+  .container-img {
+    padding: 1em;
+    min-height: 35em;
+  }
+
+  .inner-container {
+    padding: 1em;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    min-height: 20em;
+    padding: 1em;
+  }
+}
+
+/* Media Query para pantallas de TELÉFONO muy pequeñas (hasta 576px) */
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0.5em;
+    gap: 0.5em;
+  }
+
+  h1 {
+    font-size: 2.8em;
+  }
+
+  h2 {
+    font-size: 2.3em;
+  }
+
+  h3 {
+    font-size: 1.8em;
+  }
+
+  h4 {
+    font-size: 1.6em;
+  }
+
+  p {
+    font-size: 1.3em;
+  }
+
+  span {
+    font-size: 1.6em;
+  }
+
+  .header {
+    min-height: 40em;
+    /* Limita la altura del header para móviles */
+  }
+
+  .header,
+  .footer,
+  .container-img,
+  .card1,
+  .card2,
+  .card3 {
+    padding: 0.5em;
+    border-radius: 0.8em;
+  }
+
+  .column-left-header {
+    padding: 0.5em;
+  }
+
+  .column-left-footer {
+    padding: 0.5em;
+  }
+
+  .column-right-footer {
+    max-height: auto;
+  }
+
+  .container-img {
+    min-height: 20em;
+  }
+
+  .inner-container {
+    padding: 0.5em;
+  }
+
+  .card1,
+  .card2,
+  .card3 {
+    min-height: 15em;
+  }
+}
